@@ -1,0 +1,53 @@
+include  ../../users/dashboard
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Kecelakaan
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Kecelakaan
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputinformasikecelakaan", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='WaktuKejadian') Waktu Kejadian
+                                        .col-sm-10
+                                            input#WaktuKejadian.form-control(type='text' required name="WaktuKejadian" placeholder='Waktu Kejadian')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='NamaKorban') Nama Korban
+                                        .col-sm-10
+                                            input#NamaKorban.form-control(type='text' name="NamaKorban" placeholder='Nama Korban')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='AlamatKejadian') Alamat Kejadian
+                                        .col-sm-10
+                                            input#AlamatKejadian.form-control(type='text' name="AlamatKejadian" placeholder='Alamat Kejadian')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='KronologisKejadian') Kronologis Kejadian
+                                        .col-sm-10
+                                            input#KronologisKejadian.form-control(type='text' name="KronologisKejadian" placeholder='Kronologis Kejadian')
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
+
